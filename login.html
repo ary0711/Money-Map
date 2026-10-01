@@ -435,6 +435,44 @@ tfoot td{padding:12px 14px; font-weight:700; border-top:2px solid var(--border);
   .auth-switch{font-size:13px; margin-top:18px;}
 }
 
+
+/* Mobile auth fixes */
+.auth-wrap{width:100%; min-height:100vh; min-height:100dvh; overflow-x:hidden;}
+.auth-form-side{min-width:0; width:100%;}
+.auth-card{min-width:0;}
+.auth-card .brand{max-width:100%;}
+.auth-card .brand-mark{overflow:hidden;}
+.auth-card form{width:100%;}
+.auth-card input{min-width:0; max-width:100%;}
+@media (max-width:860px){
+  body{overflow-x:hidden;}
+  .auth-wrap{display:block; min-height:100dvh;}
+  .auth-visual{display:none;}
+  .auth-form-side{min-height:100dvh; min-height:100svh; display:flex; align-items:center; justify-content:center; padding:24px 20px calc(28px + env(safe-area-inset-bottom,0px));}
+  .auth-card{width:100%; max-width:420px; padding:0;}
+}
+@media (max-width:520px){
+  .auth-form-side{padding:22px 16px calc(24px + env(safe-area-inset-bottom,0px)); align-items:flex-start;}
+  .auth-card{max-width:100%; padding-top:4px;}
+  .auth-card .brand{font-size:18px; margin-bottom:28px;}
+  .auth-card .brand-mark{width:30px; height:30px;}
+  .auth-card h1{font-size:27px; line-height:1.15;}
+  .auth-card .sub{font-size:14px; line-height:1.5; margin-bottom:24px;}
+  .field{margin-bottom:15px;}
+  label{font-size:13px;}
+  input,select{width:100%; min-height:46px; font-size:16px; padding:11px 13px;}
+  .password-toggle{min-width:40px; min-height:40px; right:2px;}
+  .btn{width:100%; min-height:46px; padding:12px 18px;}
+  .remember-me{font-size:13px; margin-top:-2px;}
+  .auth-switch{font-size:13.5px; line-height:1.5; margin-top:18px;}
+}
+@media (max-width:380px){
+  .auth-form-side{padding-left:13px; padding-right:13px;}
+  .auth-card .brand{margin-bottom:24px;}
+  .auth-card h1{font-size:25px;}
+  .auth-card .sub{font-size:13.5px;}
+}
+
 </style>
 
 </head>
